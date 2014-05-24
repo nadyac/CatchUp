@@ -22,6 +22,14 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name="com.example.catchup.MyQRCodeActivity"
+            android:label="@string/title_activity_my_qrcode" >
+        </activity>
+        <activity
+            android:name="com.example.catchup.ScanQRCodeActivity"
+            android:label="@string/title_activity_scan_qrcode" >
+        </activity>
     </application>
 
 </manifest>

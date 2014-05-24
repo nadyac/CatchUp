@@ -3,6 +3,7 @@ package com.example.catchup;
 import android.support.v7.app.ActionBarActivity;
 import android.support.v7.app.ActionBar;
 import android.support.v4.app.Fragment;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.Menu;
@@ -24,7 +25,6 @@ public class MainMenuActivity extends ActionBarActivity {
                     .commit();
         }
     }
-
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
@@ -61,5 +61,22 @@ public class MainMenuActivity extends ActionBarActivity {
             return rootView;
         }
     }
-
+   
+    public void gotoMyQRCode(View view)
+    {
+    	Intent intent = new Intent(this, MyQRCodeActivity.class);
+    	//Bundle b = new Bundle();
+    	//b.putInt("playerCount", 1); //Your id
+    	//intent.putExtras(b); //Put your id to your next Intent
+    	startActivity(intent);
+		finish();	
+    }
+    
+    public void gotoScanQRCode(View view)
+    {
+    	Intent intent = new Intent(this, ScanQRCodeActivity.class);
+		startActivity(intent);
+		finish();
+    }
+  
 }
